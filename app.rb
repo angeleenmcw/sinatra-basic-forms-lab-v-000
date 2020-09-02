@@ -12,7 +12,7 @@ class App < Sinatra::Base
   
   post '/puppy' do
     
-    @puppy = Puppy.net(name: params["name"], breed: params["breed"], age: params["age"])
+    @puppy = Puppy.new(name: params["name"], breed: params["breed"], age: params["age"])
     erb :display_puppy
   end
 end
